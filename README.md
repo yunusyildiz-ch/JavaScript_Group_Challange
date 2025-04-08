@@ -130,7 +130,7 @@ Before the AI locks you inside forever. 🧠🔒
 
 ---
 
-## 🧠 What You’ll Learn
+### 🧠 What You’ll Learn
 
 By reading, running, or modifying this project, you will strengthen your understanding of:
 
@@ -143,19 +143,45 @@ By reading, running, or modifying this project, you will strengthen your underst
 
 ---
 
-## 👥 Team Members
-
-- 🧑‍💻 Sara Posso PARRA
-- 🧑‍💻 Dawit Teum GEBRU
-- 🧑‍💻 Yunus YILDIZ
-
----
-
 ### 🏆 Play, Think, Escape!
 
 > Will you outsmart the AI or become just another locked-down engineer?  
 > **Try your luck. Solve the puzzles. Escape the Data Center.**
 
-Good luck, adventurer — may your terminal guide you well. 🚀
+Good luck, adventurer — may your browser guide you well. 🚀
+
+### 📖 License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+This project is licensed under the **MIT License**.  
+See the [LICENSE](./LICENSE) file for more details.
+
+You are free to:
+
+- ✅ Use the content for personal or educational purposes  
+- 🔄 Modify or adapt it to your needs  
+- 📤 Share it with others  
+
+Just make sure to give proper credit when using or distributing the content.  
+
+### ☕ Support & Motivation
+
+This project is the result of consistent learning, curiosity, and a passion for sharing knowledge.  
+If you find it helpful:
+
+- ⭐ Give the repository a star
+- 🗣 Share it with friends or fellow learners
+- 💬 Open an issue or suggest improvements
+
+Your feedback and encouragement help keep this project alive and growing. Thank you! 🙏
+
+## 👥 Team Members
+
+This game was created with ❤️ **love**, 🧠 **logic**, and ☕ **lots of coffee** by our unstoppable team:
+
+- 🧑‍💻 Sara Posso PARRA
+- 🧑‍💻 Dawit Teum GEBRU
+- 🧑‍💻 Yunus YILDIZ
 
 © 2025 Powercoders Bootcamp – JavaScript Group Challenge
