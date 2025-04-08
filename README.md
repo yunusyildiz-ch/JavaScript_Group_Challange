@@ -58,13 +58,14 @@ In your 5-minute presentation, cover the following:
 
 ```bash
 /js-game-challenge
-├── index.js          # Your main game logic
+├── script.js         # Your main game logic
 ├── README.md         # Project info & documentation
 ├── index.html        # Optional
 └── pseudocode.md     # Optional: planning notes
 
 
 ```
+
 ---
 
 ## ✨ Have fun & be creative!
@@ -75,10 +76,86 @@ Your game can be funny, challenging, educational, or totally weird – **as long
 
 ---
 
-## 👥 Contributors
+# And Our Game 🎮
 
-- Sara Posso PARRA
-- Dawit Teum GEBRU
-- Yunus YILDIZ
+## 🤖 Data Center Breakout: Rogue AI
+
+A text-based JavaScript adventure game created for the **Powercoders JavaScript Group Challenge**.  
+No HTML, no UI — just pure logic, randomness, and classic `prompt()`/`alert()` interaction in the browser console!
+
+---
+
+### 🎯 Game Goal
+
+You are a systems engineer trapped inside a malfunctioning data center controlled by a rogue AI.  
+Your mission is to explore rooms, solve logic puzzles, collect tools, and escape…  
+Before the AI locks you inside forever. 🧠🔒
+
+---
+
+### 🕹️ Gameplay Overview
+
+- Navigate through **three unique rooms**: Power Grid, Cooling Room, and AI Core.
+- Each room presents a randomly selected **challenge** from:
+  - Logic puzzles 🧩
+  - Math riddles ➕➗
+  - Memory tests 🧠
+  - Code-breaking problems 🔓
+- Pass challenges to collect tools or the keycard.
+- Skip or fail too often, and you'll fall into traps or get locked out.
+- Use your **inventory** wisely to escape at the end!
+
+---
+
+### 📏 Rules
+
+- Interaction only through `prompt()` and `alert()` – no HTML or buttons
+- Random challenges, random risks – no two runs are the same
+- Retry failed challenges once, or accept defeat
+- You need the **Keycard** (from AI Core) to unlock the final door
+- Game ends in either **victory** or **trap-lock failure**
+
+---
+
+### 🛠️ JavaScript Concepts Used
+
+✅ Functions  
+✅ Arrays & Objects  
+✅ Loops & Conditionals  
+✅ Randomized logic (`Math.random()`)  
+✅ Prompt/Alert-based user input  
+✅ Inventory management  
+✅ Branching outcomes and retries  
+✅ Clean and readable modular structure
+
+---
+
+## 🧠 What You’ll Learn
+
+By reading, running, or modifying this project, you will strengthen your understanding of:
+
+- How to build interactive games using only JavaScript and browser prompts
+- Designing game logic with clean functions and conditions
+- Managing game state using arrays and objects
+- Working with randomness to create dynamic experiences
+- Creating decision-based storylines with retry systems and win/lose conditions
+- Structuring code for reusability and clarity
+
+---
+
+## 👥 Team Members
+
+- 🧑‍💻 Sara Posso PARRA
+- 🧑‍💻 Dawit Teum GEBRU
+- 🧑‍💻 Yunus YILDIZ
+
+---
+
+### 🏆 Play, Think, Escape!
+
+> Will you outsmart the AI or become just another locked-down engineer?  
+> **Try your luck. Solve the puzzles. Escape the Data Center.**
+
+Good luck, adventurer — may your terminal guide you well. 🚀
 
 © 2025 Powercoders Bootcamp – JavaScript Group Challenge
