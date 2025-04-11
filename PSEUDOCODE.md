@@ -1,82 +1,80 @@
 # 📋 Pseudocode – Game Flow
 
-This is the high-level logic behind **"Data Center Breakout: Rogue AI"** 🧠💻  
-A step-by-step breakdown of how the game operates using only JavaScript prompts and alerts.
+This is the high-level logic behind **"Data Center Breakout: Rogue AI – Extended Edition"** 🧠💻  
+An interactive JavaScript game where you explore rooms, collect items, and try to shut down a rogue AI.
 
 ---
 
-## 🟢 Game Start
+## 🟢 1. Game Initialization
 
-- Show welcome message (`alert`)
-- Ask for player name (`prompt`)
-- Initialize empty inventory `[]`
-
----
-
-## 🗂️ Define Rooms (Each with a Random Challenge)
-
-- Power Grid → random challenge  
-- Cooling Room → random challenge  
-- AI Core → random challenge  
+- 🔔 Show welcome message (`alert`)
+- 🧑 Ask for player name (`prompt`)
+- 📦 Initialize empty inventory `[]`
+- 📋 Initialize empty visited room list `[]`
 
 ---
 
-## 🚪 Enter Each Room
+## 🗂️ 2. Rooms Overview
 
-**For each room:**
+The player can choose from **5 rooms**, each with a different challenge:
 
-1. Show room name (`alert`)
-2. Ask player for action (`explore`, `skip`, or `inventory`)
-
----
-
-## ❓ Player Action Logic
-
-### 🔍 If player chooses **explore**:
-
-- Run a challenge (`logic`, `math`, `memory`, etc.)
-- If passed:
-  - Show success message
-  - Add item to inventory:
-    - `"Tool"` if regular room
-    - `"Keycard"` if AI Core
-- If failed:
-  - Ask if player wants to retry
-    - If no → **Game Over**
-    - If yes → run challenge again
-      - If passed → continue
-      - If failed → **Game Over**
+1️⃣ **Power Grid** – sparks, toolbox  
+2️⃣ **Security Room** – locked locker  
+3️⃣ **Lab** – glowing liquid  
+4️⃣ **Ventilation Shaft** – broken glass  
+5️⃣ **Server Room** – math riddle
 
 ---
 
-### ⏩ If player chooses **skip**:
+## 🎮 3. Game Loop (Max 3 Rounds)
 
-- 50% chance: trigger trap → **Game Over**
-- 50% chance: continue to next room
+Repeat up to **3 times**:
 
----
-
-### 🎒 If player chooses **inventory**:
-
-- Show current inventory (or "Empty")
-- Let player choose again in the same room
+1. 📜 Show list of **unvisited rooms**
+2. 🔢 Ask player to select a room **by number** (1–5)
+3. 🚫 If room already visited → show warning and ask again
+4. 🚪 Enter selected room and run room-specific scenario
+5. ☠️ If "Poisoned" is in inventory → skip next round and remove poison
 
 ---
 
-## 🔐 Final Escape
+## 🧪 4. Room Events & Choices
 
-- After all rooms are complete:
-  - Show escape message
-  - If `inventory` includes `"Keycard"`:
-    - ✅ **Victory! Player escapes**
-  - Else:
-    - 🔒 **Failure! Trapped forever**
+Each room has **interactive actions** like:
+
+- 🧰 Power Grid → "Pick up the toolbox?" → add `Toolbox`
+- 🔒 Security Room → "Open locker?" → needs `Toolbox` to get `Keycard`
+- 🧪 Lab → "Drink the glowing liquid?" → causes `"Poisoned"` status
+- 🌀 Ventilation → "Break glass?" → needs `Toolbox` to find `Passcode`
+- 💻 Server Room → "Solve a riddle?" → get `ShutdownCode` if correct
 
 ---
 
-## 🏁 End Game
+## ❓ 5. Input & Action Validation
 
-- Display final outcome using `alert()`
+All `prompt()`s validate input:
+
+- Accept only expected answers (`yes/no`, `1–5`, etc.)
+- Invalid input shows a friendly ❗ error and repeats the question
+
+---
+
+## 🔐 6. Final Escape Sequence
+
+After 3 room visits:
+
+- 🚪 Player approaches the AI Core
+- ✅ If inventory includes both `"Keycard"` and `"ShutdownCode"`:
+  - Show victory message – player escapes!
+- ❌ Otherwise:
+  - Show failure message – player is locked in forever
+
+---
+
+## 🏁 7. End Game
+
+- Show final result using `alert()`
+- End script
 
 ---
 
@@ -86,47 +84,35 @@ A step-by-step breakdown of how the game operates using only JavaScript prompts 
 START GAME
   - Show welcome message
   - Ask for player name
-  - Initialize empty inventory
+  - Initialize inventory = []
+  - Initialize visitedRooms = []
 
 DEFINE ROOMS:
-  - Power Grid (with a random challenge)
-  - Cooling Room (with a random challenge)
-  - AI Core (with a random challenge)
+  1. Power Grid
+  2. Security Room
+  3. Lab
+  4. Ventilation Shaft
+  5. Server Room
 
-SHOW mission intro
-
-FOR EACH room IN rooms:
-  - Show room name
-  - Ask player: explore / skip / inventory
-
-  IF player chooses "skip":
-    - Random chance: trigger trap → GAME OVER
-    - Else, continue to next room
-
-  IF player chooses "inventory":
-    - Show collected items
-    - Stay in same room (ask again next turn)
-
-  IF player chooses "explore":
-    - Run challenge for this room
-    - IF passed:
-        - Show success message
-        - IF room is AI Core → add "Keycard" to inventory
-        - ELSE → add "Tool" to inventory
-    - IF failed:
-        - Ask: "Retry?"
-        - IF no → GAME OVER
-        - IF yes:
-            - Run challenge again
-            - IF fail again → GAME OVER
-            - ELSE → show comeback message
-
-AFTER ALL ROOMS:
-  - Show final escape attempt
-  - IF inventory contains "Keycard":
-      - Show WIN message
+FOR i from 1 to 3:
+  - Show available rooms (excluding visited)
+  - ASK user to pick a room number (1–5)
+  - IF room already visited:
+      - Show warning → retry
   - ELSE:
-      - Show trapped (LOSE) message
+      - Run selected room logic
+      - Mark room as visited
+
+  - IF "Poisoned" in inventory:
+      - Show poison message
+      - Remove "Poisoned" from inventory
+      - Skip next turn (i++)
+
+FINAL ESCAPE CHECK:
+  - IF inventory contains "Keycard" AND "ShutdownCode":
+      - Show success message
+  - ELSE:
+      - Show failure message
 
 END GAME
 
