@@ -180,7 +180,7 @@ Your feedback and encouragement help keep this project alive and growing. Thank 
 
 This game was created with ❤️ **love**, 🧠 **logic**, and ☕ **lots of coffee** by our unstoppable team:
 
-- 🧑‍💻 Sara Posso PARRA
+- 🧑‍💻 Sara POSSO PARRA
 - 🧑‍💻 Dawit Teum GEBRU
 - 🧑‍💻 Yunus YILDIZ
 
